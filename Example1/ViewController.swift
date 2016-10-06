@@ -10,16 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleText: UILabel!
+    @IBOutlet weak var textInput: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func accionOk() {
+        let cadena = self.textInput.text
+        if cadena == nil || cadena!.isEmpty {
+            let alertController = UIAlertController(title: "¡Ops!", message: "Parece que se te ha olvidado pasar un texto, por favor escribe algo en el cuadro de texto.", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "Vale", style: .default) { (action) in }
+            alertController.addAction(OKAction)
+            
+            self.present(alertController, animated: true)
+            return
+        }
+        self.titleText.text = cadena
+    }
+    @IBAction func accionSacame() {
+        
+    }
 
 }
 

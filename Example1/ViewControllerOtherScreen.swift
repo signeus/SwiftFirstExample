@@ -6,4 +6,16 @@
 //  Copyright © 2016 Kevin. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ViewControllerOtherScreen: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
